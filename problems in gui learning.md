@@ -23,14 +23,14 @@ tk.mainloop()
 
 
 >**Entry**	允许输入一行文字
->>entry.delete()，删除的是列表
->>entry.insert(),加入位置信息和内容
+>>entry.delete()，删除的是列表  
+>>entry.insert(),加入位置信息和内容  
 >>entry.get()，获取一行的内容
 
 
 >**Text**	允许输入多行文字
->>text.get("<line>.<char>"),换行符也在其中，删除时应当注意
->>text.delete()
+>>text.get("<line>.<char>"),换行符也在其中，删除时应当注意  
+>>text.delete()    
 >>text.insert()
 
 
