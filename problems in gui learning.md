@@ -7,3 +7,11 @@
 tk.mainloop()
 ```
 说明来自[RealPython教程](https://realpython.com/python-gui-tkinter/#building-your-first-python-gui-application-with-tkinter)
+
+## 笔记：widgets
+
+Label	显示文本
+Button	可显示文字并且触发动作
+Entry	允许输入一行文字
+Text	允许输入多行文字
+Frame	用于将相关小部件分组或在小部件之间提供填充的矩形区域
