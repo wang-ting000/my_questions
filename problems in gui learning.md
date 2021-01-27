@@ -10,8 +10,28 @@ tk.mainloop()
 
 ## 笔记：widgets
 
-Label	显示文本
-Button	可显示文字并且触发动作
-Entry	允许输入一行文字
-Text	允许输入多行文字
-Frame	用于将相关小部件分组或在小部件之间提供填充的矩形区域
+>**Label**	显示文本
+>> 修改样式:  
+>>>label = tk.Label(
+>>>text="Hello, Tkinter",  
+>>>foreground="white",  # Set the text color to white  
+>>>background="black"  # Set the background color to black)
+>>[htmlcolors](https://htmlcolorcodes.com/color-names/)
+
+
+>**Button**	可显示文字并且触发动作
+
+
+>**Entry**	允许输入一行文字
+>>entry.delete()，删除的是列表
+>>entry.insert(),加入位置信息和内容
+>>entry.get()，获取一行的内容
+
+
+>**Text**	允许输入多行文字
+>>text.get("<line>.<char>"),换行符也在其中，删除时应当注意
+>>text.delete()
+>>text.insert()
+
+
+>**Frame**	用于将相关小部件分组或在小部件之间提供填充的矩形区域
