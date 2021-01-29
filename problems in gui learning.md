@@ -48,3 +48,18 @@ tk.mainloop()
 >>frame.pack(side=tk.LEFT)  
 >>label = tk.Label(master=frame, text=relief_name)  
 >>label.pack()
+
+
+
+## 笔记:Geometry Manager
+>.pack()
+>>fill=tk.X,tk.Y,tk.BOTH
+>>side=tk.TOPtk.LEFT,tk.RIGHT,tk.BOTTOM
+>.place()
+>>原点在左上角
+>>x=,y=
+>.grid
+>>row=,colum=
+>>sticky=n,s,e,w
+
+##笔记:event handler
