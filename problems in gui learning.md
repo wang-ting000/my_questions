@@ -65,8 +65,7 @@ tk.mainloop()
 ## 笔记:event handler
 >window.mainloop()检测是否有event 的发生，而发生后执行的函数称为event handler  
 >event_list保存event objects
->>import tkinter as tk
-
+>>import tkinter as tk  
 >>Create a window object
 >>window = tk.Tk()
 
@@ -127,4 +126,9 @@ btn_increase.grid(row=0, column=2, sticky="nsew")
 
 window.mainloop()
 ```
+
+## 笔记：更多的widgets
+>Checkbutton()
+>Radiobutton()
+
  
