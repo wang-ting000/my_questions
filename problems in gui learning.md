@@ -62,4 +62,4 @@ tk.mainloop()
 >>row=,colum=
 >>sticky=n,s,e,w
 
-##笔记:event handler
+## 笔记:event handler
