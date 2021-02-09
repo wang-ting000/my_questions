@@ -63,3 +63,19 @@ tk.mainloop()
 >>sticky=n,s,e,w
 
 ## 笔记:event handler
+>window.mainloop()检测是否有event 的发生，而发生后执行的函数称为event handler  
+>event_list保存event objects
+>>import tkinter as tk
+
+>>Create a window object
+>>window = tk.Tk()
+
+>>Create an event handler
+>>def handle_keypress(event):
+>>"""Print the character associated to the key pressed"""
+ >>print(event.char)
+
+>>Run the event loop
+>>window.mainloop()
+  
+ 
