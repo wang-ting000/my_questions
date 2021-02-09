@@ -71,11 +71,60 @@ tk.mainloop()
 >>window = tk.Tk()
 
 >>Create an event handler
->>def handle_keypress(event):
+>>def handle_keypress(event):  
 >>"""Print the character associated to the key pressed"""
  >>print(event.char)
 
 >>Run the event loop
 >>window.mainloop()
-  
+
+
+>**使用.bind()将handler_keypress和key press event 绑定**  
+>>window.bind("<Key>", handle_keypress)  
+>>[event types](https://web.archive.org/web/20190512164300/http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/event-types.html)
+
+    import tkinter as tk
+    window = tk.Tk()
+    def handle_click(event):
+        print('the button was clicked')
+
+    button = tk.Button(text='click me')
+    button.pack()
+    button.bind("<Button-1>",handle_click)
+    window.mainloop()
+
+>**使用.command()**
+>>获取Label的text
+>>>text = label["text"]
+>>重新赋予Label一个text：
+>>>label["text"] = "Good bye"
+```
+import tkinter as tk
+
+window = tk.Tk()
+
+def increase():
+    value = int(lbl_value["text"])
+    lbl_value["text"] = f"{value + 1}"
+
+def decrease():
+    value = int(lbl_value["text"])
+    lbl_value["text"] = f"{value - 1}"
+
+
+
+window.rowconfigure(0, minsize=50, weight=1)
+window.columnconfigure([0, 1, 2], minsize=50, weight=1)
+
+btn_decrease = tk.Button(master=window, text="-",command=decrease)
+btn_decrease.grid(row=0, column=0, sticky="nsew")
+
+lbl_value = tk.Label(master=window, text="0")
+lbl_value.grid(row=0, column=1)
+
+btn_increase = tk.Button(master=window, text="+",command=increase)
+btn_increase.grid(row=0, column=2, sticky="nsew")
+
+window.mainloop()
+```
  
