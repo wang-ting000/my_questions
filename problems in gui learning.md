@@ -130,5 +130,6 @@ window.mainloop()
 ## 笔记：更多的widgets
 >Checkbutton()
 >Radiobutton()
+>combobox
 
  
