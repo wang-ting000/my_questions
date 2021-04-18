@@ -56,91 +56,114 @@
 
 * 无穷迭代器  
 
-    * `itertolls.count`:是一个计数器,可以指定起始位置和步长
-            ```python
-            x=itertools.count(start=20,step=-1)
-            print(list(itertools.islice(x,1,100,1)))
-            ```
-    * `itertools.cycle`:循环指定的列表和迭代式
-            ```python
-            x=itertools.cycle('wangting')
-            print(list(itertools.islice(x,0,30,1)))
-            ```
-    * `itertools.repeat`:生成一个拥有指定数目元素的迭代器
-            ```python
-            x=itertools.repeat('k',3)
-            print(list(x))
-            ```
+    * `itertolls.count`:是一个计数器,可以指定起始位置和步长  
+    
+      ```python
+      x=itertools.count(start=20,step=-1)
+      print(list(itertools.islice(x,1,100,1)))
+      ```
+    * `itertools.cycle`:循环指定的列表和迭代式  
+
+
+      ```python
+      x=itertools.cycle('wangting')
+      print(list(itertools.islice(x,0,30,1)))
+      ```  
+      
+    * `itertools.repeat`:生成一个拥有指定数目元素的迭代器  
+
+
+      ```python
+      x=itertools.repeat('k',3)
+      print(list(x))
+      ```
             
 * 根据最短输入序列长度停止的迭代器  
      
     * `itertools.accumulate`:累加  
-            ```python
-            x=itertools.accumulate(range(10))
-            print(list(x))
-            ```
-    * `itertools.chain`:连接多个列表或迭代器
-            ```python
+
+
+      ```python
+      x=itertools.accumulate(range(10))
+      print(list(x))
+      ```
+    * `itertools.chain`:连接多个列表或迭代器  
+
+
+      ```python
             x=itertools.chain([1,2,3],[2,3,4])
             print(list(x))
             ```
     * `itertools.compress`:按真值表筛选元素
-            ```python
-            x=itertools.compress(range(3),(True,False,False))
-            print(list(x)) 
+      ```python
+      x=itertools.compress(range(3),(True,False,False))
+      print(list(x)) 
+      
      * `itertools.dropwhile`:按照真值函数丢弃掉列表和迭代器前面的元素  
-            ```python
-            x=itertools.dropwhile(lambda e:e<5,range(10))
-            print(list(x))
-            ```
+
+
+       ```python
+       x=itertools.dropwhile(lambda e:e<5,range(10))
+       print(list(x))
+       ```  
+       
      * `itertools.filterfalse`:保留对应真值为False的元素  
-            ```python
-            x = itertools.filterfalse(lambda e: e < 5, (1, 5, 3, 6, 9, 4))
-            ```
+
+
+       ```python
+       x = itertools.filterfalse(lambda e: e < 5, (1, 5, 3, 6, 9, 4))
+       ```  
+       
      * `itertools.groupby`:按照分组函数的值对元素进行分组  
-     
-            ```python
-               x = itertools.groupby(range(10), lambda x: x < 5 or x > 8)                                                                                                 
-               for condition, numbers in x:                                                  
-               print(condition, list(numbers))                                                                                                        
-            ```  
-      * `itertools.islice`:切片  
+    
+       ```python
+       x = itertools.groupby(range(10), lambda x: x < 5 or x > 8)                                                                                                 
+       for condition, numbers in x:                                                  
+       print(condition, list(numbers))                                                                                                        
+       ```  
+       
+     * `itertools.islice`:切片  
       
-      * `itertools.starmap`:类似于map  
+     * `itertools.starmap`:类似于map  
       
-            ```python
-            x = itertools.starmap(str.islower, 'aBCDefGhI')
-            ```  
+       ```python
+       x = itertools.starmap(str.islower, 'aBCDefGhI')
+       ```  
             
-      * `itertools.takewhile`:与dropwhile相反  
+     * `itertools.takewhile`:与dropwhile相反  
       
-            ```python
-            x = itertools.takewhile(lambda e: e < 5, range(10))
-            ```  
+       ```python
+       x = itertools.takewhile(lambda e: e < 5, range(10))
+       ```  
             
-      * `itertools.tee`:将一个迭代器拆成多个
+     * `itertools.tee`:将一个迭代器拆成多个
       
-            ```python
-            x = itertools.tee(range(10), 4)
-            ```
-      * `itertools.zip_longest`:类似于zip，不过已较长的列表和迭代器的长度为准  
+       ```python
+       x = itertools.tee(range(10), 4)
+       ```
+     * `itertools.zip_longest`:类似于zip，不过已较长的列表和迭代器的长度为准  
 
 
-            ```python
-            类似于zip，不过已较长的列表和迭代器的长度为准
-            ```
+       ```python
+       类似于zip，不过已较长的列表和迭代器的长度为准
+       ```
       
 * 排列组合迭代器
 
-    * `itertools.product`:产生多个列表和迭代器的(积)
+    * `itertools.product`:产生多个列表和迭代器的(积)  
+    
     ```python
     x = itertools.product('ABC', range(3))
-    ```
-    * `itertools.permutations`:产生指定数目的元素的所有排列(顺序有关)
+    ```  
+    
+    * `itertools.permutations`:产生指定数目的元素的所有排列(顺序有关)  
+    
     ```python
     permutations('ABCD', 2)
-    ```
-    * `itertools.combinations`:有序，无重复元素
+    ```  
+    
+    * `itertools.combinations`:有序，无重复元素  
+    
     * `itertools.combinations_with_replacement`:有序，有重复元素
                 
         
