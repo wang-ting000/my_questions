@@ -98,26 +98,34 @@
             x = itertools.filterfalse(lambda e: e < 5, (1, 5, 3, 6, 9, 4))
             ```
      * `itertools.groupby`:按照分组函数的值对元素进行分组  
+     
             ```python
                x = itertools.groupby(range(10), lambda x: x < 5 or x > 8)                                                                                                 
                for condition, numbers in x:                                                  
                print(condition, list(numbers))                                                                                                        
             ```  
-      * `itertools.islice`:切片
-      * `itertools.starmap`:类似于map
+      * `itertools.islice`:切片  
+      
+      * `itertools.starmap`:类似于map  
+      
             ```python
             x = itertools.starmap(str.islower, 'aBCDefGhI')
-            ```
-      * `itertools.takewhile`:与dropwhile相反
+            ```  
+            
+      * `itertools.takewhile`:与dropwhile相反  
+      
             ```python
             x = itertools.takewhile(lambda e: e < 5, range(10))
-            ```
+            ```  
+            
       * `itertools.tee`:将一个迭代器拆成多个
       
             ```python
             x = itertools.tee(range(10), 4)
             ```
-      * `itertools.zip_longest`:类似于zip，不过已较长的列表和迭代器的长度为准
+      * `itertools.zip_longest`:类似于zip，不过已较长的列表和迭代器的长度为准  
+
+
             ```python
             类似于zip，不过已较长的列表和迭代器的长度为准
             ```
