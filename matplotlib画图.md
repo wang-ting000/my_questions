@@ -3,3 +3,5 @@
 > 显示中文：  
 >> plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
 >>plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
+
+> `plt.title(r'$1/\lambda$'"=%s"%(lam_rec))`在标题显示变量以及希腊字母
